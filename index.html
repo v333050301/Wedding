@@ -39,7 +39,6 @@ body{
 
     color:white;
 }
-`
 
 .hero h1,
 .hero p,
@@ -148,7 +147,7 @@ footer{
         <label>Email</label>
         <input type="email" name="Email" required>
 
-        <label>Please RSVP by XX/XX/2028<label>
+        <label>Please RSVP by XX/XX/2028</label>label>
         <label>Will you attend?</label>
         <select name="Attendance" required>
             <option value="">Select</option>
@@ -187,8 +186,9 @@ const timer = setInterval(function () {
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24))
     / (1000 * 60 * 60));
 
-    document.getElementById("countdown").innerHTML =
-        days + " Days " + hours + " Hours" + minutes + "Minutes";
+    const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) / (1000 * 60)
+);
 
     if (distance < 0) {
         clearInterval(timer);
